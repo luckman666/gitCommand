@@ -1,0 +1,64 @@
+git下载
+https://git-scm.com/downloads
+初始化
+git init
+添加缓存
+git add.
+
+查看内存改动情况
+git status -s
+git config --global user.name 你的名字
+git config --global user.email 你的账号
+查看配置
+git config --list
+###############################################
+git clone ***.git 远程下载库
+查看分支
+git branch
+创建分支
+git branch test
+#################################################
+
+创建并立即切换到该分支
+git checkout -b 
+删除分支：
+git branch -d 
+
+git reset --hard HEAD^         回退到上个版本
+git reset --hard HEAD~3        回退到前3次提交之前，以此类推，回退到n次提交之前
+git reset --hard commit_id     退到/进到 指定commit的sha码
+
+切换到master后合并分支：
+git merge
+
+git tag
+#git 添加标签并且说明
+git tag -a <tag_name> -m "msg" <hash_val>
+#git显示详细标签内容
+git tag -ln <tag_name>
+#git 为指定commit添加标签
+#git tag -a 标签名头 -m "标签注解" （commit id）
+git tag -a v0.1 -m "version 0.1 released" 3628164
+切换标签同样用
+git reset tag标签名头
+#############用tag版本创建分支####
+git branch <branch name> <tag name>
+#####################查看历史记录#############
+查看提交情况
+git log --oneline
+查看分支详细情况：
+git log --graph
+查看分支：
+git log --reverse --oneline
+查看某人提交的
+git log --author=Linus --oneline -5
+按时间查询
+git log --oneline --before={3.weeks.ago} --after={2010-04-18} --no-merges
+查看标签：
+git log --oneline --decorate --graph
+查看所有标签：
+#####################
+git push <remote_name> <tag_name> #将标签推送到远程服务器
+git push <remote_name> --tags #将本地的全部tag推送到远程服务器
+
+
